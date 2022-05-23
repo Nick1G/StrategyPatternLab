@@ -33,6 +33,7 @@ namespace StrategyPattern
                 ticket.FeeBehaviour = new DoubledFee();
             }
 
+            // If filePath doesn't work, check OrdersPath in App.config to make sure the path is set to your local machine.
             string filePath = ConfigurationManager.AppSettings["OrdersPath"];
 
             using (StreamWriter sw = new StreamWriter(filePath, true))
